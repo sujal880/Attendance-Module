@@ -7,7 +7,9 @@ const app=express();
 app.use(express.json());
 app.use(allroutes);
 app.get('/',(req,res)=>{
-    console.log('Attendance Module is Running Properly');
+    res.status(200).json({
+        message:'Server is Properly Running'
+    });
 })
 app.listen(PORT,()=>{
     console.log("Server is Running on PORT"+PORT);
